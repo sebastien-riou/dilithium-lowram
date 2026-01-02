@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -ex
+
+PRESET=${1-minSizeRel}
+
+cd libpqcrystals-mldsa-lowram
+
+./buildit on/linux     $PRESET 
+./buildit on/cortex-m3 $PRESET 
+./buildit on/cortex-m7 $PRESET
+./buildit on/rv32imc   $PRESET  
+./buildit on/rv32imcb  $PRESET
+./buildit on/rv64imc   $PRESET 

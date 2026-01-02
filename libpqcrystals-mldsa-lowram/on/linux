@@ -1,0 +1,5 @@
+set(CMAKE_AR_O_EXT o)
+add_definitions( -DHAS_SAFE_BUTTON )
+add_definitions( -DCPU=native )
+
+
