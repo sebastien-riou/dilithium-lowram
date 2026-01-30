@@ -6,8 +6,11 @@ PRESET=${1-minSizeRel}
 
 cd libpqcrystals-mldsa-lowram
 
+./clean
 ./buildit on/linux     $PRESET 
 ./buildit on/cortex-m3 $PRESET 
+./buildit on/cortex-m4 $PRESET 
+./buildit on/cortex-m33 $PRESET 
 ./buildit on/cortex-m7 $PRESET
 ./buildit on/rv32imc   $PRESET  
 ./buildit on/rv32imcb  $PRESET
