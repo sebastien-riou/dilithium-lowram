@@ -10,8 +10,9 @@ cd libpqcrystals-mldsa-lowram
 ./buildit on/linux     $PRESET 
 ./buildit on/cortex-m3 $PRESET 
 ./buildit on/cortex-m4 $PRESET 
-./buildit on/cortex-m33 $PRESET 
 ./buildit on/cortex-m7 $PRESET
+./buildit on/cortex-m33 $PRESET 
+./buildit on/cortex-m55 $PRESET 
 ./buildit on/rv32imc   $PRESET  
 ./buildit on/rv32imcb  $PRESET
 ./buildit on/rv64imc   $PRESET 
