@@ -2,16 +2,16 @@
 
 set -ex
 
-PRESET=$2
+PRESET=${2:-minSizeRel}
 OUTDIR="build/"$(basename ${1})"/libpqcrystals-mldsa-lowram"
 
 rm -rf $OUTDIR
 mkdir -p $OUTDIR
 
-./buildit-core $1 $2 44 ${@:3}
-./buildit-core $1 $2 65 ${@:3}
-./buildit-core $1 $2 87 ${@:3}
+./buildit-core $1 $PRESET 44 ${@:3}
+./buildit-core $1 $PRESET 65 ${@:3}
+./buildit-core $1 $PRESET 87 ${@:3}
 
-mv build/$(basename ${1})/libpqcrystals-mldsa-44-lowram/libpqcrystals-mldsa-lowram.a $OUTDIR/libpqcrystals-mldsa-44-lowram.a
-mv build/$(basename ${1})/libpqcrystals-mldsa-65-lowram/libpqcrystals-mldsa-lowram.a $OUTDIR/libpqcrystals-mldsa-65-lowram.a
-mv build/$(basename ${1})/libpqcrystals-mldsa-87-lowram/libpqcrystals-mldsa-lowram.a $OUTDIR/libpqcrystals-mldsa-87-lowram.a
+#mv build/$(basename ${1})/libpqcrystals-mldsa-44-lowram/libpqcrystals-mldsa-lowram.a $OUTDIR/libpqcrystals-mldsa-44-lowram.a
+#mv build/$(basename ${1})/libpqcrystals-mldsa-65-lowram/libpqcrystals-mldsa-lowram.a $OUTDIR/libpqcrystals-mldsa-65-lowram.a
+#mv build/$(basename ${1})/libpqcrystals-mldsa-87-lowram/libpqcrystals-mldsa-lowram.a $OUTDIR/libpqcrystals-mldsa-87-lowram.a

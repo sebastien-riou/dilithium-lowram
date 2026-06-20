@@ -11,3 +11,5 @@ mkdir -p $OUTDIR
 
 cmake -B $OUTDIR -DCMAKE_TOOLCHAIN_FILE=$1 -DMLDSA_PSET=$MLDSA_PSET ${@:4} --preset $PRESET .
 cmake --build $OUTDIR --verbose --clean-first 
+
+mv build/$(basename ${1})/libpqcrystals-mldsa-${MLDSA_PSET}-lowram/libpqcrystals-mldsa-lowram.a $OUTDIR/libpqcrystals-mldsa-${MLDSA_PSET}-lowram.a
