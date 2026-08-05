@@ -12,6 +12,4 @@ mkdir -p $OUTDIR
 ./buildit-core $1 $PRESET 65 ${@:3}
 ./buildit-core $1 $PRESET 87 ${@:3}
 
-#mv build/$(basename ${1})/libpqcrystals-mldsa-44-lowram/libpqcrystals-mldsa-lowram.a $OUTDIR/libpqcrystals-mldsa-44-lowram.a
-#mv build/$(basename ${1})/libpqcrystals-mldsa-65-lowram/libpqcrystals-mldsa-lowram.a $OUTDIR/libpqcrystals-mldsa-65-lowram.a
-#mv build/$(basename ${1})/libpqcrystals-mldsa-87-lowram/libpqcrystals-mldsa-lowram.a $OUTDIR/libpqcrystals-mldsa-87-lowram.a
+cp build/$(basename ${1})/libpqcrystals-mldsa-*-lowram/*.a $OUTDIR/
